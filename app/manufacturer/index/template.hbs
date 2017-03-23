@@ -1,6 +1,6 @@
 <div class="section">
   <div class="container">
-    <div class="card column is-three-quarters">
+    <div class="card column is-fullwidth">
       <header class="card-header">
         <p class="title">Manufacturers</p>
       </header>
@@ -16,13 +16,12 @@
           </thead>
           <tbody>
             {{#each model as |manufacturer|}}
-            <tr>
-                <th><p>{{manufacturer.name}}</p></th>
-                <th>{{manufacturer.country}}</th>
-                <th>{{manufacturer.cars.length}}</th>
-                <th>See More</th>
-                {{!-- <th>{{#link-to 'detail'}}See More{{/link-to}}</th> --}}
-            </tr>
+              <tr>
+                  <th><p>{{manufacturer.name}}</p></th>
+                  <th>{{manufacturer.country}}</th>
+                  <th>{{manufacturer.cars.length}}</th>
+                  <th>{{#link-to 'manufacturer.car' manufacturer}}See More{{/link-to}}</th>
+              </tr>
             {{/each}}
           </tbody>
         </table>
