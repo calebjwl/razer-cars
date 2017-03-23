@@ -1,0 +1,32 @@
+<div class="section">
+  <div class="container">
+    <div class="card column is-three-quarters">
+      <header class="card-header">
+        <p class="title">Manufacturers</p>
+      </header>
+      <div class="card-content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Manufacturer</th>
+              <th>Country</th>
+              <th>Number of Models</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each model as |car|}}
+            <tr>
+                <th><p>{{car.name}}</p></th>
+                <th>{{car.country}}</th>
+                <th>{{car.cars.length}}</th>
+                <th>See More</th>
+                {{!-- <th>{{#link-to 'detail'}}See More{{/link-to}}</th> --}}
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
