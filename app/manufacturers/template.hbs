@@ -15,11 +15,11 @@
             </tr>
           </thead>
           <tbody>
-            {{#each model as |car|}}
+            {{#each model as |manufacturer|}}
             <tr>
-                <th><p>{{car.name}}</p></th>
-                <th>{{car.country}}</th>
-                <th>{{car.cars.length}}</th>
+                <th><p>{{manufacturer.name}}</p></th>
+                <th>{{manufacturer.country}}</th>
+                <th>{{manufacturer.cars.length}}</th>
                 <th>See More</th>
                 {{!-- <th>{{#link-to 'detail'}}See More{{/link-to}}</th> --}}
             </tr>

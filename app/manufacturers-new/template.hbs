@@ -4,16 +4,20 @@
       <header class="card-header">
         <p class="title">Add New Manufacturer</p>
       </header>
-      <div class="card-content">
+
+      <form {{action "submitForm" on="submit" class="card-content"}}>
         <p class="control">
-          <input type="text" class="input" placeholder="Company Name">
+          {{input type="text" class="input" placeholder="Company Name" value=formValues.name}}
         </p>
         <p class="control">
-          <input type="text" class="input" placeholder="ISO Contry Code">
+          {{input type="text" class="input" placeholder="ISO Country Code" value=formValues.country}}
         </p>
-        <button class="button is-info">Back</button>
+        {{#link-to 'manufacturers'}}
+          <button class="button is-info">Back</button>
+        {{/link-to}}
         <button class="button is-success">Submit</button>
-      </div>
+      </form>
+
     </div>
   </div>
 </div>
