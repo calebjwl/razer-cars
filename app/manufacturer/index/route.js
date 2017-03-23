@@ -1,8 +1,9 @@
 import Ember from 'ember';
+import config from 'razer-cars/config/environment';
 
 export default Ember.Route.extend({
   model() {
-    return fetch('https://razerapi.herokuapp.com/caleb/basic/brands')
+    return fetch(`${config.apiUrl}`)
     .then(r => r.json());
   }
 });
