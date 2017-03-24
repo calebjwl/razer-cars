@@ -6,13 +6,15 @@
       </header>
 
       <div class="card-content spaced">
-        {{!-- {{#link-to 'manufacturer.edit'}} --}}
+        {{!-- {{#link-to 'manufacturer.car.edit'}} --}}
           <button class="button is-info">Edit Manufacturer</button>
         {{!-- {{/link-to}} --}}
-        {{!-- {{#link-to 'manufacturer.edit'}} --}}
+        {{!-- {{#link-to 'manufacturer.car.edit'}} --}}
           <button class="button is-danger">Delete Manufacturer</button>
         {{!-- {{/link-to}} --}}
-        <button class="button is-success">Add New Car</button>
+          {{#link-to 'manufacturer.car.new' class="button is-success"}}
+            <button class="button is-success">Add New Car</button>
+          {{/link-to}}
       </div>
 
       <div class="columns card-content">

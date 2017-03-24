@@ -1,6 +1,6 @@
 {
   "name": "razer-cars",
   "dependencies": {
-    "bulma": "0.1.2"
+    "bulma": "0.4.0"
   }
 }
