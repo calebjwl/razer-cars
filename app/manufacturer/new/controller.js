@@ -7,8 +7,8 @@ export default Ember.Controller.extend({
   },
 
   actions: {
-    submitForm() {
-      const manufacturer = this.store.createRecord('manufacturer', this.formValues);
+    submitNewForm() {
+      const manufacturer = this.store.createRecord('brand', this.formValues);
 
       manufacturer.save().then((manufacturer) => {
         this.set('formValues', {});
