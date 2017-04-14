@@ -5,8 +5,7 @@
         <p class="title">Add New Car For {{model.name}}</p>
       </header>
       <div class="card-content">
-        <form>
-        <form {{action="submitForm" on "submit"}}>
+        <form {{action "submitForm" on "submit"}}>
           <div class="field">
             <p class="control">
               <input placeholder="Model Name" type="text" class="input" value=formValues.name>
