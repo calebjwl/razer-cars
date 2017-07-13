@@ -1,0 +1,31 @@
+<div class="section">
+  <div class="container">
+    <div class="card column">
+      <header class="card-header">
+        <p class="title">Manufacturers</p>
+      </header>
+      <div class="card-content">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Manufacturer</th>
+              <th>Country</th>
+              <th>Number of Models</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each model as |manufacturer|}}
+              <tr>
+                  <th><p>{{manufacturer.name}}</p></th>
+                  <th>{{manufacturer.country}}</th>
+                  <th>{{manufacturer.cars.length}}</th>
+                  <th>{{#link-to 'manufacturer.car' manufacturer}}See More{{/link-to}}</th>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="section">
+  <div class="container">
+    <div class="card column is-fullwidth">
+      <header class="card-header">
+        <p class="title">Add New Manufacturer</p>
+      </header>
+
+      <form {{action "submitNewForm" on="submit" class="card-content"}}>
+        <p class="control">
+          {{input type="text" class="input" placeholder="Company Name" value=formValues.name}}
+        </p>
+        <p class="control">
+          {{input type="text" class="input" placeholder="ISO Country Code" value=formValues.country}}
+        </p>
+        {{#link-to 'manufacturer'}}
+          <button class="button is-info">Back</button>
+        {{/link-to}}
+        <button class="button is-success">Submit</button>
+      </form>
+
+    </div>
+  </div>
+</div>
